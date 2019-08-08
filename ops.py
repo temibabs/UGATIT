@@ -290,7 +290,7 @@ def discriminator_loss(loss_func: str, real: list, fake: list) -> int:
 
         if loss_func == 'hinge':
             real_loss = tf.reduce_mean(relu(1.0 - real[i]))
-            fake_loss = tf.reduce_mean(relu(1.0 - fake[1.0]))
+            fake_loss = tf.reduce_mean(relu(1.0 - fake[i]))
 
         loss.append(real_loss + fake_loss)
 
